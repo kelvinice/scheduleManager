@@ -6,14 +6,14 @@
 <html>
 <head>
     <title>Schedule Manager</title>
-    <link rel="stylesheet" type="text/css" href="style 103.css">
+    <link rel="stylesheet" type="text/css" href="Style/style 103.css">
 </head>
 <body>
 <?php
-require 'header.php';
+require 'Master/header.php';
 ?>
 
-<script type="text/javascript" src="javascriptnanoreg.js"></script>
+<script type="text/javascript" src="Script/javascriptnanoreg.js"></script>
 <div id="core-content">
     <font size="20">Search Person</font>
     <form method="POST" action="do/doSearchPerson.php" >
@@ -51,7 +51,7 @@ require 'header.php';
 
 <br>
 <?php
-require 'footer.php';
+require 'Master/footer.php';
 ?>
 
 </body>

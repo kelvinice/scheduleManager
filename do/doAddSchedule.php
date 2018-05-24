@@ -19,8 +19,7 @@
     $note = $_GET["note"];
 
     $query = sprintf("INSERT INTO msrequest(ScheduleOwner, ScheduleCoOwner, ScheduleDate, Note) VALUES ('%s','%s','%s','%s')",$scheduleOwner,$scheduleCoOwner,$scheduleDate,$note);
-    //echo $query;
     mysqli_query($con,$query);
-    //echo "<script type='text/javascript'>alert('sukses insert Schedule');</script>";
+
     header('Location: ../index.php');
 ?>

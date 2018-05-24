@@ -6,15 +6,15 @@ session_start();
 <html>
 <head>
     <title>Schedule Manager</title>
-    <link rel="stylesheet" type="text/css" href="style 103.css">
+    <link rel="stylesheet" type="text/css" href="Style/style 103.css">
 </head>
 <body>
 <?php
-require 'header.php';
+require 'Master/header.php';
 ?>
-<script type="text/javascript" src="javascriptnanoreg.js"></script>
-<script type="text/javascript" src="javascriptManageSchedule.js"></script>
-<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript" src="Script/javascriptnanoreg.js"></script>
+<script type="text/javascript" src="Script/javascriptManageSchedule.js"></script>
+<script type="text/javascript" src="Script/jquery-3.3.1.js"></script>
 <div id="core-content">
 
     <?php
@@ -99,7 +99,6 @@ require 'header.php';
                 data1:temp
             },
             success: function(data){
-                //document.getElementById("notes").value = "a";
                 var tempHasil = JSON.parse(data);
 
                 //$("#notes").text("");
@@ -116,15 +115,6 @@ require 'header.php';
                         "                    </tr>");
 
                 }
-                //$("#notes").text($("#notes").text()+tempHasil[i]["Note"]);
-
-                //alert(temp);
-                // console.log("data sebelum parse:"+data);
-                // var data = JSON.parse(data);
-                //
-                // console.log("data sesudah parse;"+data);
-                // console.log("data dari $hai['A']:"+data.A);
-
             }
 
         });
@@ -138,7 +128,7 @@ require 'header.php';
 
 <br>
 <?php
-require 'footer.php';
+require 'Master/footer.php';
 ?>
 </body>
 </html>

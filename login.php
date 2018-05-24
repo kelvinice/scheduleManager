@@ -2,10 +2,10 @@
 <html>
 <head>
     <title>Schedule Manager</title>
-    <link rel="stylesheet" type="text/css" href="style 103.css">
-    <link rel="stylesheet" href="jquery-ui.css">
-    <script src="jquery-1.12.4.js"></script>
-    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="Style/style 103.css">
+    <link rel="stylesheet" href="Style/jquery-ui.css">
+    <script src="Script/jquery-1.12.4.js"></script>
+    <script src="Script/jquery-ui.js"></script>
     <script>
         $( function() {
             $( "#datepicker" ).datepicker();
@@ -14,9 +14,9 @@
 </head>
 <body>
 <?php
-require 'header.php';
+require 'Master/header.php';
 ?>
-<script type="text/javascript" src="javascriptnanoreg.js"></script>
+<script type="text/javascript" src="Script/javascriptnanoreg.js"></script>
 <div id="core-content">
     <font size="20">Login</font>
     <form method="POST" action="do/doLogin.php" >
@@ -32,7 +32,6 @@ require 'header.php';
                 <td><label id="errPassword"></label></td>
             </tr>
 
-
         </table>
 
         <br>
@@ -46,7 +45,7 @@ require 'header.php';
 
 <br>
 <?php
-require 'footer.php';
+require 'Master/footer.php';
 ?>
 </body>
 </html>

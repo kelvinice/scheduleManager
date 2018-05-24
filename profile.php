@@ -6,14 +6,14 @@ session_start();
 <html>
 <head>
     <title>Schedule Manager</title>
-    <link rel="stylesheet" type="text/css" href="style 103.css">
+    <link rel="stylesheet" type="text/css" href="Style/style 103.css">
 </head>
 <body>
 <?php
-require 'header.php';
+require 'Master/header.php';
 ?>
-<script type="text/javascript" src="javascriptnanoreg.js"></script>
-<script type="text/javascript" src="javascriptManageSchedule.js"></script>
+<script type="text/javascript" src="Script/javascriptnanoreg.js"></script>
+<script type="text/javascript" src="Script/javascriptManageSchedule.js"></script>
 <div id="core-content">
 
     <?php 
@@ -139,7 +139,7 @@ require 'header.php';
 
 <br>
 <?php
-require 'footer.php';
+require 'Master/footer.php';
 ?>
 </body>
 </html>
