@@ -1,0 +1,335 @@
+
+#logoImg{
+    height: 110px;
+    width: 150px;
+}
+
+#container{
+    position:relative;
+}
+
+.profilePicture>img{
+    height: 100px;
+    width: 300px;
+}
+
+#header{
+    background:#fff;
+    padding:5px;
+}
+#content{
+    padding:10px;
+    font-size: 110%;
+
+}
+#footer{
+    height:130px;
+    line-height:50px;
+    background:#333;
+    color:#fff;
+}
+
+
+#button1 {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  float: right;
+}
+
+.hidden{
+    display: none;
+}
+
+.redButton{
+    background-color: red;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.yellowButton{
+    background-color: gold;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.orangeButton{
+    background-color: orange;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+
+
+.blueButton{
+    background-color: blue;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.menu-wrapper {
+  margin:0 auto;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.menu-wrapper ul{
+  margin:0;
+  padding:0;
+  background-color: #333;
+  border-radius: 4px;
+  font-size: 110%;
+  line-height:50px; /*Yang mengatur tinggi menu dropdownnya*/
+}
+ul.menu-horizontal {
+  width:100%;
+  position: relative;
+  /*z-index: -;*/
+  color: white;
+}
+ul.menu-horizontal li {
+  list-style: none;
+  width:200px;
+  position:relative;
+  text-align:center;
+}/*Style menu horizontal*/
+ul.menu-horizontal >li{
+display: inline-block;
+}
+ul.menu-horizontal li a{
+position: relative;
+display: block;
+padding:10px 20px;
+text-decoration: none;
+color:#eee;
+}
+ul.menu-horizontal li a:hover {
+    background-color:#DD3D36;
+}
+
+
+/*Menyembunyikan sub menu ketika tidak dihover*/
+ul.submenu {
+position: absolute;
+display: none;
+}ul.submenu li {
+position: relative;
+}
+
+/*Menampilkan sub menu level 1 ketika menu di hover*/
+ul.menu-horizontal li:hover ul.level-1 {
+min-width: 150px;
+display: block;
+top:100%;
+animation:mantul-vertikal 1s;
+}
+
+/*Menampilkan sub menu level 1 ketika menu di hover*/
+ul.menu-horizontal li ul li:hover ul.level-2 {
+min-width: 150px;
+display: block;
+top:0;
+left:100%;
+}
+
+/*Menampilkan sub menu level 1 ketika menu di hover*/
+ul.menu-horizontal li ul li ul li:hover ul.level-3 {
+min-width: 150px;
+display: block;
+top:0;
+left:100%;
+}
+
+#button2{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+  * {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: red;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+    z-index: 1;
+    font-weight: bold;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.textsamping
+{
+text-align: center;
+position: relative;
+font-size: 40px;
+color: red;
+}
+
+/*td {
+    border: 2px solid black;
+}*/
+
+p {
+    font-size: 50;
+    font-weight: bold;
+}
+@media screen and (max-width: 900px) {
+    #button1 {
+		  float:none;
+    }
+}
+
+#core-content{
+  padding: 10px 20%;
+}
+
+.contents>img{
+    width: 270px;
+    height: 270px;
+}
+.contents>div{
+
+}
+
+.contents {
+    display: inline-block;
+    width: 49%;
+    position: relative;
+    height: 100%;
+}
+
+#head-content {
+    background-color: gray;
+}
+
+
+
