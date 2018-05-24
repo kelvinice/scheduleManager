@@ -14,6 +14,7 @@ require 'header.php';
 ?>
 <script type="text/javascript" src="javascriptnanoreg.js"></script>
 <script type="text/javascript" src="javascriptManageSchedule.js"></script>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
 <div id="core-content">
 
     <?php
@@ -78,8 +79,62 @@ require 'header.php';
         <input type="submit" value="submit">
     </form>
     <label id="errText"></label>
-</div>
+    <table border id="dateTable">
 
+    </table>
+    <span id="notes"></span>
+</div>
+<script type="text/javascript">
+
+    $(".redButton").click(function(){
+
+        var month = document.getElementById("month").value;
+        var day = document.getElementById("day").value;
+        var year = document.getElementById("year").value;
+        var temp = month+"/"+day+"/"+year;
+        $.ajax({
+            type:"POST",
+            url:"get/getSchedule.php",
+            data:{
+                data1:temp
+            },
+            success: function(data){
+                //document.getElementById("notes").value = "a";
+                var tempHasil = JSON.parse(data);
+
+                //$("#notes").text("");
+                $("#dateTable").html("<tr>\n" +
+                    "            <th>Owner</th>\n" +
+                    "            <th>CoOwner</th>\n" +
+                    "            <th>Note</th>\n" +
+                    "        </tr>");
+                for (var i=0;i<tempHasil.length;i++){
+                    $("#dateTable").html($("#dateTable").html()+"<tr>\n" +
+                        "                    <td>"+tempHasil[i]["ScheduleOwner"]+"</td>\n" +
+                        "                    <td>"+tempHasil[i]["ScheduleCoOwner"]+"</td>\n" +
+                        "                    <td>"+tempHasil[i]["Note"]+"</td>\n" +
+                        "                    </tr>");
+
+                }
+                //$("#notes").text($("#notes").text()+tempHasil[i]["Note"]);
+
+                //alert(temp);
+                // console.log("data sebelum parse:"+data);
+                // var data = JSON.parse(data);
+                //
+                // console.log("data sesudah parse;"+data);
+                // console.log("data dari $hai['A']:"+data.A);
+
+            }
+
+        });
+
+    });
+    $(".blueButton").click(function () {
+        $("#dateTable").html("");
+    });
+
+</script>
 
 <br>
 <?php

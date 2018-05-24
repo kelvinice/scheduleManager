@@ -56,8 +56,6 @@ require 'header.php';
     <?php
     if(isset($_GET['err']))echo "ERROR : ". $_GET['err'] ;
 	//$path = getcwd();
-
-
     //echo "Your Absoluthe Path is: ".$path;
     ?>
 	
