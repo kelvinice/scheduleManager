@@ -29,8 +29,17 @@
             </ul>
         </li>
         <?php
-        if(isset($_SESSION["username"]))
-            echo '<li><a href="notification.php">Notification</a></li>';
+        if(isset($_SESSION["username"])){
+            //echo '<li><a href="notification.php">Notification</a></li>';
+            $email = $_SESSION["email"];
+            $query = "SELECT * FROM msrequest WHERE ScheduleOwner = '".$email."'";
+
+            $result = mysqli_query($con,$query);
+            $count = mysqli_num_rows($result);
+
+            if($count > 0)
+            echo '<li><a href="notification.php">'.$count.' <img src="images/Social/Mail.png" style="width:30px;height:30px;"></a></li>';
+        }
         ?>
     </ul>
 </div>
