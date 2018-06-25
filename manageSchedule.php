@@ -49,7 +49,7 @@ require 'Master/header.php';
     $todayYear = $today["year"];
     $dayNumberOfTheMonth=cal_days_in_month(CAL_GREGORIAN,$todayMonth,$todayYear);
     
-    $query = "SELECT DAY(ScheduleDate) as Days FROM msschedule WHERE ScheduleCoOwner = '".$email."' OR ScheduleOwner = '".$email."' AND MONTH(ScheduleDate) = ".$todayMonth." AND MONTH(ScheduleDate) = ".$todayMonth;
+    $query = "SELECT DAY(ScheduleDate) as Days FROM msschedule WHERE (ScheduleCoOwner = '".$email."' OR ScheduleOwner = '".$email."') AND MONTH(ScheduleDate) = ".$todayMonth." AND YEAR(ScheduleDate) = ".$todayYear;
     $result = mysqli_query($con, $query);
     $count = mysqli_num_rows($result);
     //echo $count;

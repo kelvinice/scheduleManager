@@ -46,7 +46,7 @@ require 'Master/header.php';
         $profilePicture = $temp["ProfilePicture"];
     }
     ?>
-    <font size="20">Member List</font><br>
+    <font size="20">Notification List</font><br>
 
     <?php
 		if(!isset($_SESSION["username"])) //not login or not admin
@@ -55,8 +55,6 @@ require 'Master/header.php';
 		$query = "SELECT * FROM msrequest WHERE ScheduleOwner = '".$email."'";
 		$result = mysqli_query($con,$query);
 
-
-		
     ?>
 
 	<table border="1">

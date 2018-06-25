@@ -74,7 +74,7 @@ require 'Master/header.php';
             $todayYear = $today["year"];
             $dayNumberOfTheMonth=cal_days_in_month(CAL_GREGORIAN,$todayMonth,$todayYear);
 
-            $query = "SELECT DAY(ScheduleDate) as Days FROM msschedule WHERE ScheduleCoOwner = '".$email."' OR ScheduleOwner = '".$email."' AND MONTH(ScheduleDate) = ".$todayMonth." AND MONTH(ScheduleDate) = ".$todayMonth;
+            $query = "SELECT DAY(ScheduleDate) as Days FROM msschedule WHERE (ScheduleCoOwner = '".$email."' OR ScheduleOwner = '".$email."') AND MONTH(ScheduleDate) = ".$todayMonth." AND YEAR(ScheduleDate) = ".$todayYear;
             $result = mysqli_query($con, $query);
 
             $stack = array();
@@ -83,7 +83,7 @@ require 'Master/header.php';
             }
             echo '<br>'.$todayYear.' '.$today["month"].'<br>';
             if (isset($_GET["key"]) && isset($_SESSION["email"])){ //compare schedule
-                $query = "SELECT DAY(ScheduleDate) as Days FROM msschedule WHERE ScheduleCoOwner = '".$_SESSION["email"]."' OR ScheduleOwner = '".$_SESSION["email"]."' AND MONTH(ScheduleDate) = ".$todayMonth." AND MONTH(ScheduleDate) = ".$todayMonth;
+                $query = "SELECT DAY(ScheduleDate) as Days FROM msschedule WHERE (ScheduleCoOwner = '".$_SESSION["email"]."' OR ScheduleOwner = '".$_SESSION["email"]."') AND MONTH(ScheduleDate) = ".$todayMonth." AND YEAR(ScheduleDate) = ".$todayYear;
                 $result = mysqli_query($con, $query);
 
                 $stack2 = array();
